@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('pokemonsolid.ttf')
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  background-image: url('./assets/pokeballs.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokedex {
+  height: 507px;
+}
+.title-container {
+  position: relative;
+  border-radius: 5px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  bottom: 374px;
+  right: -48px;
+  min-height: 165px;
+  max-height: 165px;
+  width: 246px;
+}
+.page-title{
+  min-height: 172px;
+  max-height: 172px;
+  object-fit: contain;
+
+}
+.title-container img {
+  width: 230px;
+}
+.search-field {
+  font-family: 'MyWebFont';
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  position: relative;
+  bottom: 528px;
+  left: 422px;
+  width: 220px;
+  height: 102px;
+  background-color: #2FFA07;
+  border: 0px;
+  color: black;
+  box-shadow: -3px 3px black;
+  border-radius: 5px;
+  z-index: 1;
+}
+input::placeholder {
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  color: rgba(104, 104, 104, 0.463);
+}
+
+.submit-button {
+  position: relative;
+  font-family: 'MyWebFont';
+  letter-spacing: 2px;
+  font-size: 1em;
+  background-color: #FB9A02;
+  border-radius: 5px;
+  width: 100px;
+  height: 45px;
+  bottom: 288px;
+  left: 198px;
+  box-shadow: -3px 3px black;
+  z-index: 2;
+}
+
+
+.reset-button {
+  font-family: 'MyWebFont';
+  letter-spacing: 2px;
+  font-size: 1em;
+  position: relative;
+  left: 545px;
+  bottom: 365px;
+  box-shadow: -3px 3px black;
+  border-radius: 5px;
+  z-index: 3;
+  background-color: #FB9A02;
+  height: 45px;
+  width: 100px;
+}
+
+.random-button {
+  font-family: 'MyWebFont';
+  letter-spacing: 3px;
+  position: relative;
+  background-color: #FBFB07;
+  border-radius: 5px;
+  left: -25px;
+  width: 120px;
+  bottom: 368px;
+  height: 52px;
+  box-shadow: -3px 3px black;
+  z-index: 4;
+  font-size: 1em;
+}
+
+/*# sourceMappingURL=pokedex.css.map */
