@@ -11,6 +11,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .pokedex {
@@ -34,7 +35,6 @@ body{
   min-height: 172px;
   max-height: 172px;
   object-fit: contain;
-
 }
 .title-container img {
   width: 230px;
@@ -62,6 +62,7 @@ input::placeholder {
 }
 
 .submit-button {
+  cursor: pointer;
   position: relative;
   font-family: 'MyWebFont';
   letter-spacing: 2px;
@@ -75,15 +76,14 @@ input::placeholder {
   box-shadow: -3px 3px black;
   z-index: 2;
 }
-
-
 .reset-button {
+  cursor: pointer;
   font-family: 'MyWebFont';
   letter-spacing: 2px;
   font-size: 1em;
   position: relative;
-  left: 545px;
-  bottom: 365px;
+  left: 212px;
+  bottom: 290px;
   box-shadow: -3px 3px black;
   border-radius: 5px;
   z-index: 3;
@@ -91,20 +91,40 @@ input::placeholder {
   height: 45px;
   width: 100px;
 }
-
 .random-button {
+  cursor: pointer;
   font-family: 'MyWebFont';
   letter-spacing: 3px;
   position: relative;
   background-color: #FBFB07;
   border-radius: 5px;
-  left: -25px;
+  left: -355px;
+  bottom: 292px;
   width: 120px;
-  bottom: 368px;
   height: 52px;
   box-shadow: -3px 3px black;
   z-index: 4;
   font-size: 1em;
 }
-
-/*# sourceMappingURL=pokedex.css.map */
+.next-button{
+  width: 33px;
+  height: 34px;
+  background-color: transparent;
+  position: relative;
+  top: -354px;
+  left: -83px;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 5px;
+}
+.previous-button{
+  width: 33px;
+  height: 34px;
+  background-color: transparent;
+  position: relative;
+  top: -354px;
+  left: -155px;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 5px;
+}

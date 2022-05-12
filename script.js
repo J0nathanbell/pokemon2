@@ -1,3 +1,4 @@
+// interactive lements
 const searchButton = document.querySelector('.submit-button');
 const randomButton = document.querySelector('.random-button');
 const resetButton = document.querySelector('.reset-button');
@@ -23,18 +24,8 @@ const colors = {
   steel: '#b8b8d0'
 };
 const main_types = Object.keys(colors);
-
-searchButton.addEventListener("click", function(event){
-  const input = searchField.value;
-  event.preventDefault();
-  return fetchPokemons(input)
-});
-
-
-
-
-const pokemon_number = 12;
 const pokemonData = {}
+// functions
 const fetchPokemons = (id) => {
   const pokemonUrl =`https://pokeapi.co/api/v2/pokemon/${id}`;
   const pokemonLocationUrl = `https://pokeapi.co/api/v2/pokemon/${id}/encounters`
@@ -63,11 +54,30 @@ const fetchPokemons = (id) => {
         return pokemon
       })
     })
-  };
-  const populate = (pokemonData) => {
-    const pokemonPictureCard = document.querySelector('.page-title');
-    pokemonPictureCard.src = pokemonData.image
-  };
-  // colours
-  //
-  // const capitalize = (string) => { return string[0].toUpperCase() + string.slice(1) };
+};
+const populate = (pokemonData) => {
+  const pokemonPictureCard = document.querySelector('.page-title');
+  pokemonPictureCard.src = pokemonData.image
+};
+const capitalize = (string) => { return string[0].toUpperCase() + string.slice(1)
+};
+  // event listerners
+searchButton.addEventListener("click", function(event){
+  const input = searchField.value;
+  event.preventDefault();
+  return fetchPokemons(input)
+});
+randomButton.addEventListener("click", function(event){
+  const randomNumber = function(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+  console.log(randomNumber(1,150))
+  event.preventDefault();
+  return fetchPokemons(randomNumber(1, 150))
+});
+
+// sessionStorage.setItem("lastname", "Smith");
+// let personName = sessionStorage.getItem("lastname");
+// document.getElementById("demo").innerHTML = personName;
